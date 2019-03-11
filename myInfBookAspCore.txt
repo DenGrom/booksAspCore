@@ -1,0 +1,4 @@
+
+check existing ASP.NET Core SDK is install 
+dotnet --version
+
