@@ -1,0 +1,14 @@
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.deps.json
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.runtimeconfig.json
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.runtimeconfig.dev.json
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.dll
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.pdb
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.csprojAssemblyReference.cache
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.csproj.CoreCompileInputs.cache
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.RazorAssemblyInfo.cache
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.RazorAssemblyInfo.cs
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.AssemblyInfoInputs.cache
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.AssemblyInfo.cs
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.RazorTargetAssemblyInfo.cache
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.dll
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.pdb

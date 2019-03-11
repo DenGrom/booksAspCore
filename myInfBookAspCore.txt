@@ -1,4 +1,13 @@
+https://github.com/DenGrom/booksAspCore.git
 
 check existing ASP.NET Core SDK is install 
 dotnet --version
+Lets see all available comand and prodjects 
+dotnet new -l 
+create webapi prodject
+dotnet new webapi
+dotnet restore
+open prodgect in visua studio code 
+code .
+
 
