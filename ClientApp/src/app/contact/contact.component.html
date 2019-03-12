@@ -1,0 +1,82 @@
+<p class="title text-center">Contacts</p>
+
+
+<div class="col-md-4">
+  <p>Book Shop <strong>"Books"</strong></p>
+  <p>61022, Kharkov, st. Sumy, 51</p>
+  <br>
+  <p><strong>Work:</strong></p>
+  <p>с 10:00 до 20:00 (Mon-Sun)
+  </p>
+  <br>
+
+  <p><strong>Email:</strong> sale@books.ua</p>
+
+</div>
+
+<div class="col-md-12">
+  <br>
+  <div class="col-sm-1">
+  </div>
+  <div class="col-md-10">
+    <div class="col-md-12">
+      <h1 class="title text-center"></h1>
+      <br>
+      <form [formGroup]="messageForm" class="form-horizontal" (ngSubmit)="onSubmit()" >
+        <div class="fontcolour">
+          <fieldset>
+            <legend></legend>
+            <div class="editor-label">
+              <label for="">Name</label>
+            </div>
+            <div class="editor-field">
+              <input class="form-control" formControlName="name" type="text" value="">
+              <span class="error-input" *ngIf="submitted && messageForm.controls.name.errors" >
+                <span class="error-input" *ngIf="messageForm.controls.name.errors.required" > Your name is required</span>
+              </span>
+            </div>
+            <br>
+            <div class="editor-label">
+              <label for="">Phone</label>
+            </div>
+            <div class="editor-field">
+              <input class="form-control" id="phone"  type="text" value="">
+            </div>
+            <br>
+            <div class="editor-label">
+              <label for="">Email</label>
+            </div>
+            <div class="editor-field">
+              <input class="form-control" id="mail"  type="text" value="">
+              <span class="field-validation-valid" ></span>
+
+            </div>
+            <br>
+            <div class="editor-label">
+              <label for="">Message</label>
+            </div>
+
+            <div class="editor-label">
+              <textarea class="form-control" cols="20" id="message" formControlName="message" rows="5"></textarea>
+              <span class="error-input" *ngIf="submitted && messageForm.controls.message.errors" >
+                <span class="error-input" *ngIf="messageForm.controls.message.errors.required" > Your name is required</span>
+              </span>
+            </div>
+
+            <br>
+            <p>
+              <input class="btn btn-default" type="submit" value="Send">
+
+            </p>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-1">
+
+  </div>
+
+
+
+</div>

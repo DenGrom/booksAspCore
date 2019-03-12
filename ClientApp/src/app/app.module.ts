@@ -1,34 +1,63 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+// import { AlertModule } from 'ngx-bootstrap';
+import { NavLeftComponent } from './nav-left/nav-left.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { AboutComponent } from './about/about.component';
+import { PaymentComponent } from './payment/payment.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SectionComponent } from './section/section.component';
+import { ComputerRootComponent } from './computer-root/computer-root.component';
+import { ContactComponent } from './contact/contact.component';
+
+// import { routing } from './app.routing';
+
+// used to create fake backend
+import { fakeBackendProvider } from 'src/app/helpers/fake-backend';
+import { JwtInterceptor } from 'src/app/helpers/jwt.interceptor';
+import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
+import { LoginComponent } from './login/login.component';
+import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
+    NavLeftComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent
+    AboutComponent,
+    PaymentComponent,
+    HeaderComponent,
+    FooterComponent,
+    SectionComponent,
+    ComputerRootComponent,
+    ContactComponent,
+    LoginComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule,
+    AppRoutingModule,
+    // AlertModule.forRoot(),
     HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    ReactiveFormsModule
+    // ,
+    // ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
