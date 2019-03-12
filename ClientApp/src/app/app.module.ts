@@ -4,7 +4,7 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { AlertModule } from 'ngx-bootstrap';
+import { AlertModule } from 'ngx-bootstrap';
 import { NavLeftComponent } from './nav-left/nav-left.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -45,7 +45,7 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // AlertModule.forRoot(),
+    AlertModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule
     // ,

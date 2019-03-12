@@ -14,7 +14,10 @@ export class DataService {
   getHomeContentData() {
     debugger;
     // return this.http.get('https://localhost:5001/api/values');
-    var test = this.http.get('http://localhost:5000/api/values');
+    var test = this.http.get('http://localhost:5000/api/SampleData/WeatherForecasts')
+    .subscribe( result => {
+      debugger;
+    });
     return this.getComputerBooksData();
   }
   getComputerRootContentData() {
