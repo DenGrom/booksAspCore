@@ -12,13 +12,18 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getHomeContentData() {
-    debugger;
+    
     // return this.http.get('https://localhost:5001/api/values');
-    var test = this.http.get('http://localhost:5000/api/SampleData/WeatherForecasts')
-    .subscribe( result => {
-      debugger;
-    });
-    return this.getComputerBooksData();
+    // var test = this.http.get('http://localhost:5000/api/SampleData/WeatherForecasts')
+    // var test = this.http.get('http://localhost:3405/api/values')
+    // .subscribe(result => {
+    //   var books = result as Array<Book>;
+    //   debugger;
+    //   return  books;
+    // });
+    var test = this.http.get('http://localhost:3405/api/values');
+    // return this.getComputerBooksData();
+    return test;
   }
   getComputerRootContentData() {
     return this.getComputerBooksData();

@@ -21,7 +21,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.books = this.data.getHomeContentData();
+    var test = this.data.getHomeContentData()
+    .subscribe(result => {
+      var books = result as Array<Book>;
+      this.books = books;
+    });
 
     this.userService.getAll().pipe(first()).subscribe(users => {
       this.users = users;

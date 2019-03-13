@@ -5,7 +5,6 @@ c:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\book
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.pdb
 C:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.Views.dll
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\bin\Debug\netcoreapp2.2\booksAspCore.Views.pdb
-c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.csprojAssemblyReference.cache
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.csproj.CoreCompileInputs.cache
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.RazorAssemblyInfo.cache
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.RazorAssemblyInfo.cs
@@ -22,3 +21,4 @@ c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\book
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.dll
 c:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.pdb
 C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.csproj.CopyComplete
+C:\Users\denisg\source\repos\booksAng2\booksAspCore\obj\Debug\netcoreapp2.2\booksAspCore.csprojResolveAssemblyReference.cache
