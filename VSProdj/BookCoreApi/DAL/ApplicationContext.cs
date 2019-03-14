@@ -7,10 +7,12 @@ namespace DAL
 {
     public class ApplicationContext : DbContext
     {
+        //string connection = @"Server=.\sql2016;Database=BookNg;Trusted_Connection=True;ConnectRetryCount=0";
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+        //public ApplicationContext() : base()
         {
         }
-        public DbSet<User> Blogs { get; set; }
-        public DbSet<Book> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }

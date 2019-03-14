@@ -15,7 +15,8 @@ open prodgect in visua studio code
 code .
 
 
-
+Add-Migration InitialCreate
+Update-Database
 
 
 
