@@ -1,5 +1,7 @@
-﻿using DAL.Entity;
+﻿using DAL;
+using DAL.Entity;
 using DAL.Model;
+using DAL.Repositories;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -14,15 +16,15 @@ namespace BookCoreApi.Services
 {
     public class UserService : IUserService
     {
-        private List<User> _users = new List<User>
-        {
-            new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
-        };
+        private UserRepository _userRepository;
+        private List<User> _users;
 
         private readonly AppSettings _appSettings;
 
-        public UserService(IOptions<AppSettings> appSettings)
+        public UserService(IOptions<AppSettings> appSettings, ApplicationContext context)
         {
+            _userRepository = new UserRepository(context);
+            _users = _userRepository.GetBooks().Result;
             _appSettings = appSettings.Value;
         }
 
