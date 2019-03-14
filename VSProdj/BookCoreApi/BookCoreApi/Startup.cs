@@ -11,6 +11,11 @@ using Microsoft.Extensions.Options;
 using DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using DAL.Model;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using BookCoreApi.Services;
 
 namespace BookCoreApi
 {
@@ -44,8 +49,31 @@ namespace BookCoreApi
                         .AllowCredentials();
                     });
             });
-            services.AddMvc();
 
+            services.AddMvc();
+            // configure strongly typed settings objects
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+            services.AddScoped<IUserService, UserService>();
             var connection = @"Server=.\sql2016;Database=BookNg;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<ApplicationContext>
                 (options => options.UseSqlServer(connection));
@@ -59,6 +87,7 @@ namespace BookCoreApi
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("AllowAll");
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

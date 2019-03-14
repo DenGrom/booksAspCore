@@ -20,6 +20,8 @@ namespace BookCoreApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                // add for jwt auth
+                //.UseUrls("http://localhost:4200")
                 .Build();
     }
 }
