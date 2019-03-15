@@ -18,7 +18,6 @@ import { ContactComponent } from './contact/contact.component';
 // import { routing } from './app.routing';
 
 // used to create fake backend
-import { fakeBackendProvider } from 'src/app/helpers/fake-backend';
 import { JwtInterceptor } from 'src/app/helpers/jwt.interceptor';
 import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
 import { LoginComponent } from './login/login.component';
@@ -54,9 +53,6 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
-    // provider used to create fake backend
-    //fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

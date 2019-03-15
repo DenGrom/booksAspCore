@@ -1,3 +1,5 @@
+import {UserRole} from 'src/app/Models/userRole';
+
 export class User {
     id: number;
     username: string;
@@ -5,4 +7,5 @@ export class User {
     firstName: string;
     lastName: string;
     token?: string;
+    userRole: UserRole
 }

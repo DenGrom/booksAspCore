@@ -87,7 +87,6 @@ A file named angular.json at the root level of an Angular workspace provides wor
 angular.json has "index": 
 "src/index.html",
             "main": "src/main.ts",
-
 2. main.ts: starts the prodject, adds module(s) (import { AppModule } from './app/app.module';)
  index.html: sets <app-root></app-root>, in this will be load app
 4. app.module: adds app.component.ts (import { AppComponent } from './app.component';) with ./app.component.html in wich exists all html content for <app-root></app-root>

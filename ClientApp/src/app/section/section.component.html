@@ -2,7 +2,7 @@
   <!--slider-->
   <div class="container">
       <div class="row">
-        <app-nav-left class="sidebar-left col-xs-12 col-md-3"></app-nav-left>
+        <app-nav-left *ngIf="isStandartUser" class="sidebar-left col-xs-12 col-md-3"></app-nav-left>
         <div class="col-md-8 col-sm-10 col-xs-3">
             <router-outlet></router-outlet>
         </div>

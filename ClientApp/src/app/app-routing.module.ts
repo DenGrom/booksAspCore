@@ -36,23 +36,7 @@ const routes: Routes = [
       }
     ]
   },
-  // {
-  //   path: '',
-  //   component: HomeComponent,
-  //   canActivate: [AuthGuard]
-  // },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent
-  // },
-
-  // otherwise redirect to home
   { path: '**', redirectTo: '' },
-
-  // { path: 'about', component: AboutComponent },
-  // { path: 'payment', component: PaymentComponent },
-  // { path: 'computer', component: ComputerRootComponent },
-  // { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import {UserRole} from 'src/app/Models/userRole';
 
 @Component({
   selector: 'app-section',
@@ -6,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section.component.css']
 })
 export class SectionComponent implements OnInit {
+  private isStandartUser: boolean;
+  constructor() { 
+    var currentUser = localStorage.getItem('currentUser');
+    if(currentUser)
+    {
 
-  constructor() { }
+      var user = <User>JSON.parse(localStorage.getItem('currentUser'));
+      this.isStandartUser = user.userRole == UserRole.Standard;
+    }
+     
+  }
 
   ngOnInit() {
   }
