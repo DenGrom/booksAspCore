@@ -23,6 +23,7 @@ import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
 import { LoginComponent } from './login/login.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
     ContactComponent,
     LoginComponent,
     HomeLayoutComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,8 @@ ng serve --open
 ng generate component navMain
 or simple
 ng g c navMain
+or if error
+ng generate component admin --module=app.module
 generate serves
 ng g s data
 generate class

@@ -13,9 +13,8 @@ export class SectionComponent implements OnInit {
     var currentUser = localStorage.getItem('currentUser');
     if(currentUser)
     {
-
       var user = <User>JSON.parse(localStorage.getItem('currentUser'));
-      this.isStandartUser = user.userRole == UserRole.Standard;
+      this.isStandartUser = user.userRole == UserRole.User;
     }
      
   }

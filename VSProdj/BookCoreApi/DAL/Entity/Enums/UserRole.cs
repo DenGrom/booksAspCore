@@ -8,6 +8,6 @@ namespace DAL.Entity.Enums
     {
         None,
         Admin,
-        Standard
+        User
     }
 }

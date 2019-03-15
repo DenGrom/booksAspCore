@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
+import {UserRole} from 'src/app/Models/userRole';
 
 import { AuthenticationService } from '../authentication.service';
 
@@ -49,7 +50,16 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate([this.returnUrl]);
+          debugger;
+          if(data.userRole == UserRole.Admin)
+          {
+            this.router.navigate(['admin']);
+          }
+          if(data.userRole == UserRole.User)
+          {
+            this.router.navigate(['user']);
+          }
+          
         },
         error => {
           this.error = error;
